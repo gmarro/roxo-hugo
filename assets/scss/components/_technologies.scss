@@ -2,10 +2,26 @@
   padding: 100px 0;
   background: $gray;
 
+  h1 {
+
+    @include desktop-lg{
+      font-size: 50px;
+      margin-bottom: 50px;
+    }
+    @include mobile{
+      font-size: 40px;
+    }
+  }
+
   .card {
     min-height: 150px;
     min-width: 200px;
     margin-right: 5px;
+
+    @include tablet {
+      min-height: 90px;
+      min-width: 120px;
+    }
 
     &-img-top {
       padding: 5px;
