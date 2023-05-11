@@ -1,15 +1,15 @@
 {{ with .Site.Params.banner }}
   {{ if .enable }}
   {{ "<!-- Site Hero Start -->" | safeHTML }}
-  <section class="site-hero" style="background-image: url('{{ .background_image }}');">
+  <section class="site-hero" id="site-hero">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto">
           <div class="site-hero-content text-center">
-            <h6>{{ .tagline }}</h6>
             <h1>
               {{ .heading }}
             </h1>
+            <h5>{{ .tagline }}</h5>
             <ul class="site-hero-content-buttons">
               <li>
                 <a href="{{ .primary_button_url | absURL }}" class="btn btn-secondary">
@@ -20,7 +20,7 @@
                   </span>
                 </a>
               </li>
-              <li>
+              <!--<li>
                 <a href="{{ .secondary_button_url | absURL }}" class="btn btn-primary">
                   <span class="btn-area">
                     <span data-text="{{ .secondary_button }}">
@@ -28,16 +28,26 @@
                     </span>
                   </span>
                 </a>
-              </li>
+              </li>-->
             </ul>
           </div>
         </div>
       </div>
     </div>
-    <a href="#counter" class="site-hero-scroll scroll-to">
+    <a href="#technologies" class="site-hero-scroll scroll-to">
       <img src="{{ "images/arrow-down.svg" | absURL }}" alt="arrow-down">
     </a>
   </section>
+  <script src='https://unpkg.com/trianglify@^4/dist/trianglify.bundle.js'></script>
+  <script>
+    const pattern = trianglify({
+      width: window.innerWidth,
+      height: window.innerHeight,
+      strokeWidth: 1,
+      fill: false 
+    })
+    document.getElementById('site-hero').appendChild(pattern.toCanvas());
+  </script>
   {{ "<!-- Site Hero End -->" | safeHTML }}
   {{ end }}
 {{ end }}

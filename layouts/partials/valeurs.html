@@ -1,0 +1,23 @@
+{{ with .Site.Data.valeurs }}
+  {{ if .enable }}
+  <section class="site-valeurs" id="valeurs">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section-title text-center">
+            <h2 class="text-white">{{ .heading }}</h2>
+          </div>
+        </div>
+        {{ range .valeurs }}
+        <div class="col-12">
+          <div class="site-valeurs-item">
+            <span class="site-valeurs-item-title">{{ .title }}</span>
+            <h3 class="site-valeurs-item-description">{{ .description }}</h3>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+{{ end }}

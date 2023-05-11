@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<section class="site-expertise">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <div class="section-title">
+          <h2>
+            {{ .Params.heading }}
+          </h2>
+        </div>
+      </div>
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+
+{{ partial "valeurs.html" . }}
+
+{{ partial "call-to-action.html" . }}
+
+{{ end }}

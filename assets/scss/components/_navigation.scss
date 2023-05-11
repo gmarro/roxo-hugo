@@ -42,6 +42,9 @@
   .navbar-toggler{
     outline: 0;
     padding: 0;
+    @include desktop{
+      border: none;
+    }
     .icon-bar {
       height: 2px;
       width: 25px;

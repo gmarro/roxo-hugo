@@ -1,0 +1,24 @@
+{{ with .Site.Data.technologies }}
+  {{ if .enable }}
+  <section class="site-technologies" id="technologies">
+    <div class="container-fluid py-2">
+        <div class="text-center">
+          <h1>
+            Compétences techniques
+          </h1>
+        </div>
+        <div class="d-flex flex-row flex-nowrap overflow-auto py-4">
+          {{ range .competences_technologiques }}
+          <div class="card">
+            <img class="card-img-top " src="{{ .logoPath }}" alt="{{ .title }}" />
+            <div class="card-body">
+              <h5 class="card-title">{{ .title }}</h5>
+              <p class="card-text">{{ .description }}</p>
+            </div>
+          </div>
+          {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+{{ end }}

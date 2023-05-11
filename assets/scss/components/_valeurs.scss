@@ -1,0 +1,28 @@
+.site-valeurs{
+  padding: 85px 0;
+  color: $text-color-dark;
+  background: $primary-color;
+  .section-title{
+    margin-bottom: 40px;
+  }
+  @include mobile{
+    padding: 50px 0;
+  }
+  &-item{
+    margin: 20px 0;
+    @include desktop{
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    &-title{
+      font-size: 30px;
+      font-weight: 300;
+    }
+    &-description{
+      color: $text-color;
+      font-size: 15px;
+      margin-bottom: 0;
+      font-weight: 200;
+    }
+  }
+}

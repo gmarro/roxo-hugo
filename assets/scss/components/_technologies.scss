@@ -1,0 +1,18 @@
+.site-technologies{
+  padding: 100px 0;
+  background: $gray;
+
+  .card {
+    min-height: 150px;
+    min-width: 200px;
+    margin-right: 5px;
+
+    &-img-top {
+      padding: 5px;
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      margin: auto;
+    }
+  }
+}
