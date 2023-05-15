@@ -27,6 +27,10 @@
       padding: 5px;
       width: 150px;
       height: 150px;
+      @include tablet {
+        height: 90px;
+        width: 90px;
+      }
       object-fit: contain;
       margin: auto;
     }
